@@ -1,0 +1,309 @@
+*{
+    box-sizing: border-box;
+    
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, sans-serif;
+    margin-left: 0px;
+}
+#home {
+    padding-top: 60px; /* Adjust this value to match the height of your navbar */
+    padding: 20px;
+  }
+.listing-form-img{
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+  display: block;
+}
+@media screen and (max-width: 600px) {
+	.listing-form-img{
+		height: 20vh;
+		width: 100%;
+	}
+}
+.heading-text-container{
+  text-align: center;
+  padding: 5px;
+  margin-top: 40px;
+}
+.listing-heading{
+  font-size: 30px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+}
+@media screen and (max-width: 600px) {
+  .listing-heading{
+    font-size: 25px;
+
+  }
+}
+.text{
+  font-size: 17px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}
+@media screen and (max-width: 600px) {
+  .text{
+    font-size: 15px;
+    
+  }
+}
+.text-2{
+  font-size: 17px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  margin-bottom: 35px;
+}
+@media screen and (max-width: 600px) {
+  .text-2{
+    font-size: 15px;
+    
+  }
+}
+.two-list-input-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 600px) {
+  .two-list-input-container{
+    display: flex;
+    flex-direction: column;
+  }
+}
+.label-input-container{
+  background-color: antiquewhite;
+	width: 25vw;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 5px;
+}
+@media screen and (max-width: 600px) {
+  .label-input-container{
+    width: 60vw;
+    
+  }
+}
+.list-label{
+  color: red;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 18px;
+
+}
+.list-input{
+  width: 20vw;
+	height: 43px;
+	border-width: 0px;
+  background-color: azure;
+  padding: 5px;
+  margin-bottom: 17px;
+}
+@media screen and (max-width: 600px) {
+  .list-input{
+    width: 55vw;
+    height: 33px;
+    
+  }
+}
+.required{
+  color: red;
+}
+.option-element{
+  font-size: 12px;
+}
+@media screen and (max-width: 600px) {
+  .option-element{
+    font-size: 10px;
+  }
+}
+.unrequired-label{
+  color: #000000;
+  font-size: 18px;
+  padding: 5px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  
+}
+.single-frame-input-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.single-input-container{
+  background-color: antiquewhite;
+	width: 52vw;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 5px; 
+}
+@media screen and (max-width: 600px) {
+  .single-input-container{
+    width: 60vw;
+  }
+}
+.single-list-input{
+  width: 46.7vw;
+	height: 43px;
+	border-width: 0px;
+  background-color: azure;
+  padding: 5px;
+  margin-bottom: 17px;
+}
+@media screen and (max-width: 600px) {
+  .single-list-input{
+    width: 55vw;
+  }
+}
+.blood-input-container{
+    background-color: antiquewhite;
+    width: 12vw;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+@media screen and (max-width: 600px) {
+  .blood-input-container{
+    width: 60vw;
+  }
+}
+.blood-input{
+  width: 8vw;
+  height: 43px;
+	border-width: 0px;
+  background-color: azure;
+  padding: 5px;
+  margin-bottom: 17px;
+}
+@media screen and (max-width: 600px) {
+  .blood-input{
+    width: 55vw;
+    height: 33px;
+  }
+}
+.area-input-container{
+  background-color: antiquewhite;
+  width: 38vw;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;  
+}
+@media screen and (max-width: 600px) {
+  .area-input-container{
+    width: 60vw;
+  }
+}
+.area-input{
+  width: 33vw;
+  height: 43px;
+	border-width: 0px;
+  background-color: azure;
+  padding: 5px;
+  margin-bottom: 17px;
+}
+@media screen and (max-width: 600px) {
+  .area-input{
+    width: 55vw;
+    height: 33px;
+  }
+}
+.text-area{
+  width: 47vw;
+	border-width: 0px;
+  background-color: azure;
+  padding: 5px;
+  margin-bottom: 17px;
+  margin-top: 5px;
+}
+@media screen and (max-width: 600px) {
+  .text-area{
+    height: 133px;
+    width: 55vw;
+
+  }
+}
+.required-element{
+  font-size: 12px;
+  margin-left: 4px;
+  
+}
+.captcha-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media screen and (max-width: 600px) {
+  .captcha-container{
+    display: flex;
+    flex-direction: column;
+  }
+}
+.captcha-input{
+  background-color: antiquewhite;
+	width: 16.5vw;
+  height: 43px;
+	margin: 10px;
+	padding: 6px;
+	border-radius: 5px; 
+}
+@media screen and (max-width: 600px) {
+  .captcha-input{
+    width: 59vw;
+  }
+}
+.captcha-input-2{
+  width: 14vw;
+}
+@media screen and (max-width: 600px) {
+  .captcha-input-2{
+    width: 53vw;
+   
+  }
+}
+
+.gpay-text{
+  font-size: 14px;
+  width: 16.5vw;
+  margin-left: 10px;
+  color: red;
+  text-align: end;
+}
+@media screen and (max-width: 600px) {
+  .gpay-text{
+    width: 70vw;
+  }
+}
+.gpay-qr{
+  height: 254px;
+}
+.checkbox-and-condition-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.checkbox-input-container{
+  background-color: antiquewhite;
+	width: 52vw;
+	margin: 10px;
+	padding: 10px;
+	border-radius: 5px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 600px) {
+  .checkbox-input-container{
+    width: 70vw;
+  }
+}
+.checkbox-input{
+  margin-right: 15px;
+  height: 82px;
+	width: 83px;
+
+}
+.btn-container{
+  margin-bottom: 12px;
+}
