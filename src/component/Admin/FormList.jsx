@@ -2,9 +2,11 @@ import React, { useEffect, useState } from "react";
 import { getForms, updateFormStatus } from "./Api";
 import FormCard from "./FormCard";
 import { FaUser } from "react-icons/fa";
+import "./spinner.css"
 
 const FormList = () => {
   const [forms, setForms] = useState([]);
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     fetchForms();
@@ -12,19 +14,25 @@ const FormList = () => {
 
   const fetchForms = async () => {
     try {
+      setLoading(true)
       const formsData = await getForms();
       setForms(formsData);
     } catch (error) {
       console.error("Error fetching forms:", error);
+    } finally {
+      setLoading(false)
     }
   };
 
   const handleStatusUpdate = async (formId, status) => {
     try {
+      setLoading(true)
       await updateFormStatus(formId, status);
       fetchForms();
     } catch (error) {
       console.error(`Error updating status for form ${formId}:`, error);
+    } finally {
+      setLoading(false)
     }
   };
 
@@ -51,8 +59,15 @@ const FormList = () => {
         </div>
       </div>
 
-      <div className="p-6 flex flex-wrap gap-6 justify-center">
-        {forms.map((form) => (
+      <div className={`p-6 flex flex-wrap gap-6 justify-center ${loading ? "items-center" : ""}`}>
+        {loading ? (<div className="spinner">
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+  <div></div>
+</div>) 
+        : (forms.map((form) => (
             <div className=" border-4 border-gray-700 border-opacity-10 shadow-lg w-fit h-fit p-4 flex justify-center items-center flex-col">
                 <img className=" w-16 object-cover" src="https://img.icons8.com/?size=100&id=492ILERveW8G&format=png&color=000000" alt="" />
           <FormCard
@@ -62,7 +77,8 @@ const FormList = () => {
           
           />
           </div>
-        ))}
+        ))
+        )}
       </div>
     </div>
   );
